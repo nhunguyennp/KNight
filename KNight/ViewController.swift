@@ -62,10 +62,12 @@ class ViewController: UIViewController, UITextFieldDelegate,
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let selectedProfile = info[UIImagePickerControllerOriginalImage] as? UIImage else
+        guard let selectedProfile = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else
         {
-            
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
+        profileImageView.image = selectedProfile
+        dismiss(animated: true, completion: nil)
     }
     //MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
