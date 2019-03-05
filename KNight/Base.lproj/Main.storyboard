@@ -72,7 +72,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5c8-w0-4Cz">
                                                 <rect key="frame" x="0.0" y="38" width="248" height="30"/>
@@ -108,14 +108,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="G0j-en-Ncp">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="G0j-en-Ncp">
                                 <rect key="frame" x="123.5" y="70" width="128" height="128"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="G0j-en-Ncp" secondAttribute="height" multiplier="1:1" id="lcA-iS-gnT"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="HkD-Ad-HlB" appends="YES" id="dIf-Pa-s5o"/>
+                                    <outletCollection property="gestureRecognizers" destination="zVE-gH-TL9" appends="YES" id="SHJ-SU-vhz"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -134,15 +134,15 @@
                         <outlet property="heightTextField" destination="PSM-vr-eRT" id="IXG-GA-8VI"/>
                         <outlet property="idTextField" destination="sWa-4j-IkY" id="oLy-EW-vV3"/>
                         <outlet property="nameTextField" destination="ZqL-QU-3c4" id="L7z-A4-HUb"/>
-                        <outlet property="profileImageView" destination="G0j-en-Ncp" id="94C-N8-q5D"/>
+                        <outlet property="profileImageView" destination="G0j-en-Ncp" id="378-Bq-JWd"/>
                         <outlet property="usernameTextField" destination="5c8-w0-4Cz" id="arY-sQ-xty"/>
                         <outlet property="weightTextField" destination="BZ6-Zs-O2m" id="TYv-hG-kro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="HkD-Ad-HlB">
+                <tapGestureRecognizer id="zVE-gH-TL9">
                     <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="GlG-EQ-nz0"/>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="wrC-It-CSK"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
