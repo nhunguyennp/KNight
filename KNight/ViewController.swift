@@ -29,6 +29,12 @@ class ViewController: UIViewController, UITextFieldDelegate,
         heightTextField.delegate = self
         weightTextField.delegate = self
         
+        // Create border for profile
+        profileImageView.layer.cornerRadius = profileImageView.frame.width/2
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.borderColor = UIColor.black.cgColor
+        profileImageView.clipsToBounds = true
+        
     }
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -78,6 +84,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
     }
    
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        // Hide keyboard
         self.view.endEditing(true)
         let profilePickerController = UIImagePickerController()
         profilePickerController.sourceType = .photoLibrary
