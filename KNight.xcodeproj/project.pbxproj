@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8E211E0A221CDC5B009E119A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211E09221CDC5B009E119A /* AppDelegate.swift */; };
-		8E211E0C221CDC5B009E119A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211E0B221CDC5B009E119A /* ViewController.swift */; };
+		8E211E0C221CDC5B009E119A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211E0B221CDC5B009E119A /* EditProfileViewController.swift */; };
 		8E211E0F221CDC5B009E119A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E211E0D221CDC5B009E119A /* Main.storyboard */; };
 		8E211E11221CDC67009E119A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E211E10221CDC67009E119A /* Assets.xcassets */; };
 		8E211E14221CDC67009E119A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E211E12221CDC67009E119A /* LaunchScreen.storyboard */; };
 		8E211E1F221CDC68009E119A /* KNightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211E1E221CDC68009E119A /* KNightTests.swift */; };
+		8E50FA30223225560024D349 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50FA2F223225560024D349 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* Begin PBXFileReference section */
 		8E211E06221CDC5B009E119A /* KNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E211E09221CDC5B009E119A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E211E0B221CDC5B009E119A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E211E0B221CDC5B009E119A /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		8E211E0E221CDC5B009E119A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E211E10221CDC67009E119A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E211E13221CDC67009E119A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		8E211E1A221CDC68009E119A /* KNightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KNightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E211E1E221CDC68009E119A /* KNightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNightTests.swift; sourceTree = "<group>"; };
 		8E211E20221CDC68009E119A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E50FA2F223225560024D349 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 		8E211E08221CDC5B009E119A /* KNight */ = {
 			isa = PBXGroup;
 			children = (
+				8E50FA2F223225560024D349 /* ProfileViewController.swift */,
 				8E211E09221CDC5B009E119A /* AppDelegate.swift */,
-				8E211E0B221CDC5B009E119A /* ViewController.swift */,
+				8E211E0B221CDC5B009E119A /* EditProfileViewController.swift */,
 				8E211E0D221CDC5B009E119A /* Main.storyboard */,
 				8E211E10221CDC67009E119A /* Assets.xcassets */,
 				8E211E12221CDC67009E119A /* LaunchScreen.storyboard */,
@@ -197,8 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E211E0C221CDC5B009E119A /* ViewController.swift in Sources */,
+				8E211E0C221CDC5B009E119A /* EditProfileViewController.swift in Sources */,
 				8E211E0A221CDC5B009E119A /* AppDelegate.swift in Sources */,
+				8E50FA30223225560024D349 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

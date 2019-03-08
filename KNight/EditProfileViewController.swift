@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate,
+class EditProfileViewController: UIViewController, UITextFieldDelegate,
                     UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     //MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         heightTextField.delegate = self
         weightTextField.delegate = self
         
-        // Create border for profile
+        // Create border and circle for profile image
         profileImageView.layer.cornerRadius = profileImageView.frame.width/2
         profileImageView.layer.borderWidth = 1
         profileImageView.layer.borderColor = UIColor.black.cgColor
@@ -83,6 +83,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         dismiss(animated: true, completion: nil)
     }
    
+    //MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         // Hide keyboard
         self.view.endEditing(true)
@@ -91,5 +92,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         profilePickerController.delegate = self
         present(profilePickerController, animated: true, completion: nil)
     }
+    //MARK: Helper Methods
 }
+
 
