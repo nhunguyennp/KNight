@@ -18,9 +18,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     
+    var user: User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        profileImageView.layer.cornerRadius = profileImageView.frame.width/2
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.borderColor = UIColor.gray.cgColor
+        profileImageView.clipsToBounds = true
+        
         // Do any additional setup after loading the view.
     }
     

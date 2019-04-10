@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class EditProfileViewController: UIViewController, UITextFieldDelegate,
                     UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -18,6 +19,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate,
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
+    
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +35,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate,
         // Create border and circle for profile image
         profileImageView.layer.cornerRadius = profileImageView.frame.width/2
         profileImageView.layer.borderWidth = 1
-        profileImageView.layer.borderColor = UIColor.black.cgColor
+        profileImageView.layer.borderColor = UIColor.gray.cgColor
         profileImageView.clipsToBounds = true
         
     }
@@ -83,6 +86,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate,
         dismiss(animated: true, completion: nil)
     }
    
+    //MARK: Navigation
+    
     //MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         // Hide keyboard
