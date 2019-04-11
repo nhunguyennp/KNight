@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0A946F225FF875002D9650 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A946E225FF875002D9650 /* MessageViewController.swift */; };
 		8E1F1F04223B4F8500FDFAA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1F1F03223B4F8500FDFAA8 /* User.swift */; };
 		8E211E0A221CDC5B009E119A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211E09221CDC5B009E119A /* AppDelegate.swift */; };
 		8E211E0C221CDC5B009E119A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E211E0B221CDC5B009E119A /* EditProfileViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E0A946E225FF875002D9650 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		8E1F1F03223B4F8500FDFAA8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8E211E06221CDC5B009E119A /* KNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E211E09221CDC5B009E119A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				8E345F09225D9C3800A66842 /* UartModuleViewController.swift */,
 				8E345F07225D9BF300A66842 /* BLECentralViewController.swift */,
 				8E211E09221CDC5B009E119A /* AppDelegate.swift */,
+				8E0A946E225FF875002D9650 /* MessageViewController.swift */,
 				8E211E0B221CDC5B009E119A /* EditProfileViewController.swift */,
 				8E1F1F03223B4F8500FDFAA8 /* User.swift */,
 				8E211E0D221CDC5B009E119A /* Main.storyboard */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E345F08225D9BF300A66842 /* BLECentralViewController.swift in Sources */,
+				8E0A946F225FF875002D9650 /* MessageViewController.swift in Sources */,
 				8E1F1F04223B4F8500FDFAA8 /* User.swift in Sources */,
 				8E345F0A225D9C3800A66842 /* UartModuleViewController.swift in Sources */,
 				8E211E0C221CDC5B009E119A /* EditProfileViewController.swift in Sources */,

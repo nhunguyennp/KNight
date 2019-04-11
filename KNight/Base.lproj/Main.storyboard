@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SOM-rr-YV9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rvK-ak-6OR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -410,6 +410,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGQ-jI-HDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2898.4000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="5Me-6J-dqY">
+            <objects>
+                <viewController id="rvK-ak-6OR" customClass="MessageViewController" customModule="KNight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EgX-Ys-rft"/>
+                        <viewControllerLayoutGuide type="bottom" id="BCb-hR-f8t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6KM-Un-5S0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEc-La-Wme">
+                                <rect key="frame" x="16" y="94" width="101" height="30"/>
+                                <state key="normal" title="Send Message"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="fzn-tP-wvN" eventType="touchUpInside" id="I6a-Tp-I9n"/>
+                                    <action selector="sendMessage:" destination="rvK-ak-6OR" eventType="touchUpInside" id="TIC-se-ZAa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CEc-La-Wme" firstAttribute="top" secondItem="EgX-Ys-rft" secondAttribute="bottom" constant="74" id="iEf-NH-LXQ"/>
+                            <constraint firstItem="CEc-La-Wme" firstAttribute="leading" secondItem="6KM-Un-5S0" secondAttribute="leadingMargin" id="uA5-cs-5LE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yaR-iw-wuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fzn-tP-wvN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5517.6000000000004" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>
