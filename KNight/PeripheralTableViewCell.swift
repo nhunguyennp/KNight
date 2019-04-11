@@ -10,6 +10,7 @@ import UIKit
 
 class PeripheralTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var peripheralLabel: UILabel!
     @IBOutlet weak var rssiLabel: UILabel!
     
