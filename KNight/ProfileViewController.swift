@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     
+    @IBOutlet weak var connectToKnightButton: UIButton!
     var user: User?
     
     override func viewDidLoad() {
@@ -41,6 +42,15 @@ class ProfileViewController: UIViewController {
             ageLabel.text = "Age: \(user.age ?? "" )"
             heightLabel.text = "Height: \(user.height ?? "")"
             weightLabel.text = "Weight: \(user.weight ?? "")"
+        }
+        if let sourceViewController = sender.source as? BLECentralViewController
+        {
+            let isConnected = sourceViewController.isConnected
+            print("is connected from Profile page: \(isConnected)")
+            if (isConnected)
+            {
+                connectToKnightButton.setTitle("Connected to KNight", for: UIControl.State.normal)
+            }
         }
         
     }

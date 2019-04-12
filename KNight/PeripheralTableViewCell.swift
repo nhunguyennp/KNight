@@ -13,7 +13,7 @@ class PeripheralTableViewCell: UITableViewCell {
     
     @IBOutlet weak var peripheralLabel: UILabel!
     @IBOutlet weak var rssiLabel: UILabel!
-    
+    @IBOutlet weak var isConnectedLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

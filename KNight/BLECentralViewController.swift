@@ -29,6 +29,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     var characteristicValue = [CBUUID: NSData]()
     var timer = Timer()
     var characteristics = [String : CBCharacteristic]()
+    var isConnected = false;
     
     //UI
     @IBOutlet weak var baseTableView: UITableView!
@@ -155,16 +156,17 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         peripheral.delegate = self
         //Only look for services that matches transmit uuid
         peripheral.discoverServices([BLEService_UUID])
+        isConnected = true;
         
         
         //Once connected, move to new view controller to manager incoming and outgoing data
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "UartModuleViewController") as! UartModuleViewController
+        //let uartViewController = storyboard.instantiateViewController(withIdentifier: "UartModuleViewController") as! UartModuleViewController
         
-        uartViewController.peripheral = peripheral
+        //uartViewController.peripheral = peripheral
         
-        navigationController?.pushViewController(uartViewController, animated: true)
+        //navigationController?.pushViewController(uartViewController, animated: true)
     }
     
     /*
@@ -253,7 +255,6 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
      */
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if characteristic == rxCharacteristic {
-            print("Is rxCharacteristic")
             if let ASCIIstring = NSString(data: characteristic.value!, encoding: String.Encoding.utf8.rawValue) {
                 characteristicASCIIValue = ASCIIstring
                 print("Value Recieved: \((characteristicASCIIValue as String))")
@@ -339,13 +340,30 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             cell.peripheralLabel.text = peripheral.name
         }
         cell.rssiLabel.text = "RSSI: \(RSSI)"
-        
+        if (isConnected)
+        {
+            cell.isConnectedLabel.text = "Connected"
+        }
+        else{
+            cell.isConnectedLabel.text = "Not Connected"
+        }
+        print("is connected: \(isConnected)")
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         blePeripheral = peripherals[indexPath.row]
         connectToDevice()
+        let cell = tableView.cellForRow(at: indexPath) as! PeripheralTableViewCell
+        if (isConnected)
+        {
+            cell.isConnectedLabel.text = "Connected"
+        }
+        else{
+            cell.isConnectedLabel.text = "Not Connected"
+        }
+        tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        
     }
     
     /*
