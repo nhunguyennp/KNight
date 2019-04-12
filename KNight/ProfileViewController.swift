@@ -30,16 +30,20 @@ class ProfileViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: Actions
+    @IBAction func unwindToProfile(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? EditProfileViewController, let user = sourceViewController.user
+        {
+            profileImageView.image = user.profileImage
+            nameLabel.text = user.name
+            usernameLabel.text = user.username
+            idLabel.text = "ID: " + user.id
+            ageLabel.text = "Age: \(user.age ?? "" )"
+            heightLabel.text = "Height: \(user.height ?? "")"
+            weightLabel.text = "Weight: \(user.weight ?? "")"
+        }
+        
     }
-    */
+    
 
 }

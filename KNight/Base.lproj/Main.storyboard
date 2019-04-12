@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rvK-ak-6OR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SOM-rr-YV9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -82,6 +82,13 @@
                             <constraint firstItem="cnw-XD-ueB" firstAttribute="top" secondItem="0HA-F5-saJ" secondAttribute="bottom" constant="50" id="qKh-A2-Wsf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="P7z-9M-JNp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="KOP-WS-LY0">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="p6h-Vv-j5F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ageLabel" destination="bJP-BZ-cWR" id="TDM-Ri-aM6"/>
                         <outlet property="heightLabel" destination="BAH-cf-OZz" id="HoV-nC-v8E"/>
@@ -94,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZb-s0-XXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2006" y="134"/>
+            <point key="canvasLocation" x="2455" y="134"/>
         </scene>
         <!--Central View Controller-->
         <scene sceneID="LYD-yb-WwV">
@@ -164,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sis-3k-SqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3837.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="4776.8000000000002" y="133.5832083958021"/>
         </scene>
         <!--Uart Module View Controller-->
         <scene sceneID="pEH-lk-TnP">
@@ -225,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6h-m8-VSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4684" y="133.5832083958021"/>
+            <point key="canvasLocation" x="5623.1999999999998" y="133.5832083958021"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="tne-QT-ifu">
@@ -349,31 +356,32 @@
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="due-0p-hNq">
                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="nxm-0M-k3j"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="eex-2e-4eU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rlk-R7-eGO">
                             <connections>
-                                <segue destination="S2a-VY-HPY" kind="show" id="02a-3d-AhX"/>
+                                <segue destination="xDz-eb-1a2" kind="unwind" unwindAction="unwindToProfileWithSender:" id="zZn-9L-bhk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="EPH-pO-bIa" id="5Gz-ix-sIO"/>
-                        <outlet property="doneButton" destination="eex-2e-4eU" id="5Px-a9-MxO"/>
                         <outlet property="heightTextField" destination="PSM-vr-eRT" id="IXG-GA-8VI"/>
                         <outlet property="idTextField" destination="sWa-4j-IkY" id="oLy-EW-vV3"/>
                         <outlet property="nameTextField" destination="ZqL-QU-3c4" id="L7z-A4-HUb"/>
                         <outlet property="profileImageView" destination="G0j-en-Ncp" id="378-Bq-JWd"/>
+                        <outlet property="saveButton" destination="rlk-R7-eGO" id="F2N-GD-RJm"/>
                         <outlet property="usernameTextField" destination="5c8-w0-4Cz" id="arY-sQ-xty"/>
                         <outlet property="weightTextField" destination="BZ6-Zs-O2m" id="TYv-hG-kro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="xDz-eb-1a2" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="zVE-gH-TL9">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="wrC-It-CSK"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+            <point key="canvasLocation" x="164" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ome-Oc-AaF">
@@ -391,7 +399,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZQ-0T-jC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-783" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1ho-8d-kSu">
@@ -409,7 +417,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGQ-jI-HDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2898.4000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="3837.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--Message View Controller-->
         <scene sceneID="5Me-6J-dqY">
@@ -442,10 +450,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yaR-iw-wuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fzn-tP-wvN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5517.6000000000004" y="133.5832083958021"/>
+            <point key="canvasLocation" x="6456.8000000000002" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bBK-ng-PCA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WCw-QD-KcE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gwl-O6-Bey">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S2a-VY-HPY" kind="relationship" relationship="rootViewController" id="ylF-YK-0ZG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5H-Qm-KyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="134"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultImage" width="128.16000366210938" height="128.16000366210938"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="p6h-Vv-j5F"/>
+    </inferredMetricsTieBreakers>
 </document>

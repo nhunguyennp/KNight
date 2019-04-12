@@ -20,7 +20,10 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate,
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     
-    @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    // optional User, maybe nil at some point
+    var user: User?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +90,24 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate,
     }
    
     //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let button = sender as? UIBarButtonItem, button == saveButton else
+        {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        let name = nameTextField.text ?? ""
+        let username = usernameTextField.text ?? ""
+        let id = idTextField.text ?? ""
+        let age = ageTextField.text ?? ""
+        let height = heightTextField.text ?? ""
+        let weight = weightTextField.text ?? ""
+        let profileImage = profileImageView.image
+        
+        user = User(name: name, username: username, id: id, age: age, height: height, weight: weight, profileImage: profileImage)
+    }
     
     //MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {

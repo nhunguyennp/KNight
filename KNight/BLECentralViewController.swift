@@ -64,7 +64,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("Stop Scanning")
+        print("Stop Scanning - View Disappearing")
         centralManager?.stopScan()
     }
     
